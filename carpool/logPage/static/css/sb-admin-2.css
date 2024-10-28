@@ -82,6 +82,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  -webkit-text-fill-color: #c3f73aff;
 }
 
 p {
@@ -432,6 +433,7 @@ small,
 .small {
   font-size: 80%;
   font-weight: 400;
+  color: #95E06C;
 }
 
 mark,
@@ -627,6 +629,10 @@ pre code {
   margin-left: -0.75rem;
 }
 
+.card-body.p-0{
+  background-color: #18181c;
+
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -648,6 +654,7 @@ pre code {
   width: 100%;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+  color:#c3f73aff;
 }
 
 .col {
@@ -2327,7 +2334,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #858796;
+  color: #094D92;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -2371,14 +2378,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #4e7cdf;
-  border-color: #4e73df;
+  background-color: #094D92;
+  border-color: #094D92;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2e59d9;
-  border-color: #2653d4;
+  background-color: #094D92;
+  border-color: #094D92;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -9833,7 +9840,7 @@ a:focus {
 
 .bg-gradient-primary {
   background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4edadf 10%, #224abe 100%);
+  background-image: linear-gradient(180deg, #c3f73aff 10%, #68B684 100%);
   background-size: cover;
 }
 
