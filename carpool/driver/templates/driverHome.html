@@ -40,7 +40,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB64EM3P7XmfNlop7aUjzacIXAQJVAMjkA &libraries=places&callback=initMap"></script>
 </head>
 
-<body class="bg-gradient-primary" style = "min-height: 100vh ; min-width: 100vh ;  background-image: url('/static/images/cab.gif');">
+<body class="bg-gradient-primary" style = "min-height: 100vh ; min-width: 100vh ; background-image: url('/static/images/car.gif');">
 
   <div class="container">
     <!-- Outer Row -->
@@ -51,10 +51,10 @@
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
-            <div class="row" style="background-color: rgb(224, 240, 250);">
+            <div class="row" style="background-color: #094d92ff;">
               <div class="col-lg-6 d-none d-lg-block"> 
                  <span class="img-container"> <!-- Inline parent element -->
-                  <img src="{% static 'images/carpool1.jpeg' %}" alt="Carpool" style="display: block; margin: 0 auto;"/>
+                  <img src="{% static 'images/EazyGo.png' %}" alt="Carpool" style="display: block; margin: 0 auto; width: 200px; height: 200px"/>
                  </span>
               </div>
               <div class="col-lg-6">
@@ -70,7 +70,7 @@
                        <input type="hidden" id="lng" name="lngVal">
                        <input type="hidden" id = "userId" name = "userId" value = {{username}}>
                     </div>
-                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit">
+                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit" style="background-color: #c3f73aff; border-color: #c3f73aff; color: #094d92ff;>
                     <hr>
                   </form>
                   <hr>

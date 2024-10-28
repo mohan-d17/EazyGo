@@ -33,7 +33,7 @@
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
-            <div class="row" style="background-color: rgb(224, 240, 250);">
+            <div class="row" style="background-color: rgba(9, 77, 146, 1);">
               <!-- <div class="col-lg-6 d-none d-lg-block"> 
                  <span class="img-container"> 
                   <img src="{% static 'images/carpool1.jpeg' %}" alt="Carpool" align = "center"/>
@@ -45,11 +45,11 @@
                     <h1 class="h4 text-gray-900 mb-4">SELECT YOUR OPTION</h1>
                   </div>
                   <form class="user">
-                    <a href="{% url 'driver:driverHome' %}" class="btn btn-primary btn-user btn-block">
+                    <a href="{% url 'driver:driverHome' %}" class="btn btn-primary btn-user btn-block" style="background-color: #c3f73aff; border-color: #c3f73aff; color: #094d92ff;">
                       Offer a drive
                     </a>
                     <hr>
-                    <a href="{% url 'rider:ride' %}" class="btn btn-primary btn-user btn-block">
+                    <a href="{% url 'rider:ride' %}" class="btn btn-primary btn-user btn-block" style="background-color: #c3f73aff; border-color: #c3f73aff; color: #094d92ff;">
                       Request a ride
                     </a>
                   </form>
