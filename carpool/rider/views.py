@@ -16,22 +16,12 @@ from django.http import JsonResponse
 
 # Create your views here.
 
-def drive_or_ride(request):
-    return render(request, 'drive_or_ride.html')
-
-def charts(request):
-    return render(request, 'charts.html')
-
-def tables(request):
-    return render(request, 'charts.html')
-
 def index(request):
 	print(request.user.username)
 	return render(request , "riderHome.html" , {'username' : request.user.username})
 	# return HttpResponse("<h1>SUCCESS</h1>")
 
 def rideInfo(request):
-	context={}
 	if request.method == "POST":
 		print(request.POST['userId'])
 		print(request.POST['pickup'])
@@ -54,7 +44,7 @@ def statusUpdate(request):
 	print("here ----------------------------------")
 	id = request.GET['id']
 	update =request.GET['update']
-	gmaps = googlemaps.Client(key='AIzaSyB64EM3P7XmfNlop7aUjzacIXAQJVAMjkA') 
+	gmaps = googlemaps.Client(key='AIzaSyD8dVjp8Aj8wjmkzaL1p4NY8HDQXrbpNXE') 
 	rideDetils = get_object_or_404(ride, pk=id)
 	my_dist_1 = gmaps.distance_matrix(rideDetils.pickUp , rideDetils.destination)['rows'][0]['elements'][0]["distance"]["value"]
 	my_dist_1 = my_dist_1/1000.0
@@ -75,7 +65,7 @@ def rideSuccessful(request):
 		print("rider id", id)
 		rideDetails = get_object_or_404(ride, pk=id)
 	#return render(request, 'polls/results.html', {'rideDetails': rideDetails})
-	return HttpResponse("<h1>SUCCESS</h1>")
+	return HttpResponse("<h1>SUCCESS </h1>")
 
 # def endRide(request):
 # 	print(request.GET['id'], "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")

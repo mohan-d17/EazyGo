@@ -25,7 +25,7 @@ SECRET_KEY = '3+i$6h-b(!7g3(1(1n0(j7$95q1s*p%^7o70-^rvm&+!efh1=r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -121,7 +121,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    "carpool/carpool/driver/static",  # Adjust this path to where your static files are located
-]

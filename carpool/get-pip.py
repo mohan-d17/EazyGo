@@ -117,11 +117,13 @@ def bootstrap(tmpdir=None):
     # already exist on the target platform.
     if implicit_setuptools:
         try:
+            import setuptools  # noqa
             implicit_setuptools = False
         except ImportError:
             pass
     if implicit_wheel:
         try:
+            import wheel  # noqa
             implicit_wheel = False
         except ImportError:
             pass

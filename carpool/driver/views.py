@@ -13,20 +13,14 @@ import googlemaps
 import json
 
 
-def index(request):
-    return render(request, 'login.html')
-
-def drive_or_ride(request):
-    return render(request, 'drive_or_ride.html')
-
 def driverHome(request):
 	print(request.user.username)	
 	return render(request , "driverHome.html" , {'username' : request.user.username})
 
 def driverInfo(request):
 	print(request.user.username + " driveInfo")
-	print(request.POST.get('destination',None))
-	return render(request , "driverProcess1.html" , {'username' : request.user.username , 'dest' : request.POST.get('destination',None)})
+	print(request.POST['destination'])
+	return render(request , "driverProcess1.html" , {'username' : request.user.username , 'dest' : request.POST['destination']})
 
 def searchRider(request):
 	print("@@@@@@@@@@@@@@@@@@@@@@@@@*******************&&&&&&&&&&&&&&&&&&&&&&&&&&&**********************")
@@ -46,7 +40,7 @@ def searchRider(request):
 	rideList = []
 	print(riderSet)
 	print("####################----------------------------------------------------------------------------------------")
-	gmaps = googlemaps.Client(key='AIzaSyB64EM3P7XmfNlop7aUjzacIXAQJVAMjkA')
+	gmaps = googlemaps.Client(key='AIzaSyD8dVjp8Aj8wjmkzaL1p4NY8HDQXrbpNXE')
 	print("@@@@@@@@@@@@@@@@@@@@@----------------------------------------------------------------------------------------")
 	driverRoutePoints = gmaps.directions((float(liveLat) ,float(liveLong)), driver_dest, mode="driving")
 	# print(len(driverRoutePoints[0]))

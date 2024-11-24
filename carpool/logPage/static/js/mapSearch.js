@@ -1,58 +1,58 @@
-function initMap() {
-	var map, infoWindow , marker, location;
-	window.liveLatitude=0, window.liveLongitude=0, window.flag=true;
-	map = new google.maps.Map(document.getElementById('map-canvas'), {
-	center: {lat: -34.397, lng: 150.644},
-		zoom: 6
-	});
-	infoWindow = new google.maps.InfoWindow;
-	// Try HTML5 geolocation.
-	var test = 10;
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-			console.log(test + " TEST")
-			var pos = {
-				lat: position.coords.latitude,
-				lng: position.coords.longitude
-			};
-			window.liveLatitude = pos['lat'];
-			window.liveLongitude = pos['lng'];
-			// window.flag = false;
-			marker = new google.maps.Marker(
-			{
-				position: pos,
-				map: map,
-				// icon: 'http://pngimages.net/sites/default/files/google-maps-png-image-70164.png',
-				draggable: false
-			});
+// function initMap() {
+// 	var map, infoWindow , marker, location;
+// 	window.liveLatitude=0, window.liveLongitude=0, window.flag=true;
+// 	map = new google.maps.Map(document.getElementById('map-canvas'), {
+// 	center: {lat: -34.397, lng: 150.644},
+// 		zoom: 6
+// 	});
+// 	infoWindow = new google.maps.InfoWindow;
+// 	// Try HTML5 geolocation.
+// 	var test = 10;
+// 	if (navigator.geolocation) {
+// 		navigator.geolocation.getCurrentPosition(function(position) {
+// 			console.log(test + " TEST")
+// 			var pos = {
+// 				lat: position.coords.latitude,
+// 				lng: position.coords.longitude
+// 			};
+// 			window.liveLatitude = pos['lat'];
+// 			window.liveLongitude = pos['lng'];
+// 			// window.flag = false;
+// 			marker = new google.maps.Marker(
+// 			{
+// 				position: pos,
+// 				map: map,
+// 				// icon: 'http://pngimages.net/sites/default/files/google-maps-png-image-70164.png',
+// 				draggable: false
+// 			});
 
-			map.setCenter(pos);
-			test = 20;
-		},function() {
-			handleLocationError(true, infoWindow, map.getCenter());
-		});
-	}
-	else {
-		// Browser doesn't support Geolocation
-		handleLocationError(false, infoWindow, map.getCenter());
-	}
-	console.log(test + " TEST OUT #")
-	while(test == 10){}
-	console.log(test + " TEST OUT")
-	var pos = {
-		lat: window.liveLatitude,
-		lng: window.liveLongitude
-	};
-	return pos;
-}
+// 			map.setCenter(pos);
+// 			test = 20;
+// 		},function() {
+// 			handleLocationError(true, infoWindow, map.getCenter());
+// 		});
+// 	}
+// 	else {
+// 		// Browser doesn't support Geolocation
+// 		handleLocationError(false, infoWindow, map.getCenter());
+// 	}
+// 	// console.log(test + " TEST OUT #")
+// 	// while(test == 10){}
+// 	console.log(test + " TEST OUT")
+// 	// var pos = {
+// 	// 	lat: window.liveLatitude,
+// 	// 	lng: window.liveLongitude
+// 	// };
+// 	// return pos;
+// }
 
-	  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-		infoWindow.setPosition(pos);
-		infoWindow.setContent(browserHasGeolocation ?
-							  'Error: The Geolocation service failed.' :
-							  'Error: Your browser doesn\'t support geolocation.');
-		infoWindow.open(map);
-	  }
+// 	  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+// 		infoWindow.setPosition(pos);
+// 		infoWindow.setContent(browserHasGeolocation ?
+// 							  'Error: The Geolocation service failed.' :
+// 							  'Error: Your browser doesn\'t support geolocation.');
+// 		infoWindow.open(map);
+// 	  }
 
 var longVal = 0 , latVal = 0 , map, infoWindow , marker, location;
 //initMap -> initialize()
@@ -104,12 +104,12 @@ function initialize(coords) {
 	 * Creates the marker on the map
 	 *
 	 */
-	marker = new google.maps.Marker({
-		position: mapOptions.center,
-		map: map,
-		// icon: 'http://pngimages.net/sites/default/files/google-maps-png-image-70164.png',
-		draggable: true
-	});
+	// marker = new google.maps.Marker({
+	// 	position: mapOptions.center,
+	// 	map: map,
+	// 	// icon: 'http://pngimages.net/sites/default/files/google-maps-png-image-70164.png',
+	// 	draggable: true
+	// });
 
 	/**
 	 * Creates a search box
