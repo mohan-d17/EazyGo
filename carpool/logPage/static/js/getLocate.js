@@ -188,14 +188,14 @@ function initMap() {
 	}
 	console.log(test + " TEST OUT babh abha a")
 	
-	//initMap1();
-	// var directionsService = new google.maps.DirectionsService();
-	// console.log(liveLongitude, liveLatitude, dest_point)
-	// var routePoints = directionsService.route(
-	// 						{
-	// 						origin: new google.maps.LatLng(liveLatitude , liveLongitude),
-	// 						destination: dest_point,
-	// 						travelMode: 'DRIVING'
-	// 						}).routes[0].legs[0].steps;
-	// console.log(routePoints)
+	initMap1();
+	var directionsService = new google.maps.DirectionsService();
+	console.log(liveLongitude, liveLatitude, dest_point)
+	var routePoints = directionsService.route(
+							{
+							origin: new google.maps.LatLng(liveLatitude , liveLongitude),
+							destination: dest_point,
+							travelMode: 'DRIVING'
+							}).routes[0].legs[0].steps;
+	console.log(routePoints)
 }
