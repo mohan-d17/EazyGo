@@ -54,13 +54,13 @@
             <div class="row" style="background-color: rgb(224, 240, 250);">
               <div class="col-lg-6 d-none d-lg-block"> 
                  <span class="img-container"> <!-- Inline parent element -->
-                  <img src="{% static 'images/carpool1.jpeg' %}" alt="Carpool" align = "center"/>
+                  <img src="{% static 'images\carpool1.png' %}" alt="Carpool" style="width: 250px; height: 250px"/>
                  </span>
               </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">All set to go!!</h1>
+                    <h1 style="color: #000000;">All set to go!!</h1>
                   </div>
                   <form action="{% url 'rider:rideInfo' %}" name = "rideInfo" method = "post" class= "rider">
                     {% csrf_token %}
